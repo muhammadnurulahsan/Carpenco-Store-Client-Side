@@ -4,7 +4,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'openSans': ['Open Sans', 'sans-serif'],
-        'iBM Plex': ['IBM Plex Sans', 'serif'],
+        'iBMPlex': ['IBM Plex Sans', 'serif'],
         'libreBasker': ['Libre Baskerville', 'sans-serif'],
         'montserrat': ['Montserrat', 'sans-serif']
       },
