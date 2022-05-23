@@ -72,43 +72,46 @@ const Purchase = () => {
         </div>
       </div>
 
-      <div class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex items-center space-x-2 text-gray-400 text-sm">
-            <Link to="/home" class="hover:underline hover:text-gray-600">
+      <div className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center space-x-2 text-gray-400 text-sm">
+            <Link to="/home" className="hover:underline hover:text-gray-600">
               Home
             </Link>
             <span>
               <svg
-                class="h-5 w-5 leading-none text-gray-300"
+                className="h-5 w-5 leading-none text-gray-300"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
                 <path
-                  stroke-linecap="round"
+                  strokeLinecap="round"
                   stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeWidth="2"
                   d="M9 5l7 7-7 7"
                 />
               </svg>
             </span>
-            <Link to="/products" class="hover:underline hover:text-gray-600">
+            <Link
+              to="/products"
+              className="hover:underline hover:text-gray-600"
+            >
               Carpenter Tools
             </Link>
             <span>
               <svg
-                class="h-5 w-5 leading-none text-gray-300"
+                className="h-5 w-5 leading-none text-gray-300"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
                 <path
-                  stroke-linecap="round"
+                  strokeLinecap="round"
                   stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeWidth="2"
                   d="M9 5l7 7-7 7"
                 />
               </svg>
@@ -117,37 +120,41 @@ const Purchase = () => {
           </div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
-          <div class="flex flex-col md:flex-row -mx-4">
-            <div class="md:flex-1 lg:w-[50%] px-4">
-              <div class="h-64 md:h-80 rounded-lg bg-gray-100 mb-4">
-                <div class="h-64 md:h-80 rounded-lg bg-gray-100 mb-4 flex items-center justify-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
+          <div className="flex flex-col md:flex-row -mx-4">
+            <div className="md:flex-1 lg:w-[50%] px-4">
+              <div className="h-64 md:h-80 rounded-lg bg-gray-100 mb-4">
+                <div className="h-64 md:h-80 rounded-lg bg-gray-100 mb-4 flex items-center justify-center">
                   <img src={img} className="w-full h-full rounded-lg" alt="" />
                 </div>
               </div>
-              <div class="md:flex-1 px-4">
-                <h2 class="mb-2 leading-tight tracking-tight font-bold text-gray-800 text-2xl md:text-3xl">
+              <div className="md:flex-1 px-4">
+                <h2 className="mb-2 leading-tight tracking-tight font-bold text-gray-800 text-2xl md:text-3xl">
                   {productName}
                 </h2>
-                <p class="text-gray-500 text-sm">
+                <p className="text-gray-500 text-sm">
                   By{" "}
-                  <a href="#h" class="text-indigo-600 hover:underline">
+                  <a href="#h" className="text-indigo-600 hover:underline">
                     Carpenco Company
                   </a>
                 </p>
 
-                <div class="flex items-center space-x-4 my-4">
+                <div className="flex items-center space-x-4 my-4">
                   <div>
-                    <div class="rounded-lg bg-gray-100 flex py-2 px-3">
-                      <span class="text-indigo-400 mr-1 mt-1">$</span>
-                      <span class="font-bold text-indigo-600 text-3xl">
+                    <div className="rounded-lg bg-gray-100 flex py-2 px-3">
+                      <span className="text-indigo-400 mr-1 mt-1">$</span>
+                      <span className="font-bold text-indigo-600 text-3xl">
                         {price}
                       </span>
                     </div>
                   </div>
-                  <div class="flex-1">
-                    <p class="text-green-500 text-xl font-semibold">Save 12%</p>
-                    <p class="text-gray-400 text-sm">Inclusive of all Taxes.</p>
+                  <div className="flex-1">
+                    <p className="text-green-500 text-xl font-semibold">
+                      Save 12%
+                    </p>
+                    <p className="text-gray-400 text-sm">
+                      Inclusive of all Taxes.
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-center pb-3">
@@ -163,7 +170,7 @@ const Purchase = () => {
                     {rating} (1,000+)
                   </div>
                 </div>
-                <p class="text-gray-500">{description}</p>
+                <p className="text-gray-500">{description}</p>
               </div>
             </div>
             <div className="lg:mx-0 mx-5 lg:w-[50%]">
@@ -221,7 +228,7 @@ const Purchase = () => {
                         <textarea
                           type="text"
                           name="message"
-                          class="textarea textarea-success"
+                          className="textarea textarea-success"
                           placeholder="Enter Your Address"
                         ></textarea>
                         <div className="flex mt-8">

@@ -50,8 +50,8 @@ const ContactUs = () => {
           </h5>
         </div>
       </div>
-      <div class="hero py-20">
-        <div class="hero-content flex-col lg:flex-row">
+      <div className="hero py-20">
+        <div className="hero-content flex-col lg:flex-row">
           <div className="mx-5 lg:pr-20">
             <div className="">
               <h1 className="font-libreBasker font-light text-4xl pb-3">
@@ -121,7 +121,7 @@ const ContactUs = () => {
                     <textarea
                       type="text"
                       name="message"
-                      class="textarea textarea-success"
+                      className="textarea textarea-success"
                       placeholder="Enter Your Massage"
                     ></textarea>
                   </div>

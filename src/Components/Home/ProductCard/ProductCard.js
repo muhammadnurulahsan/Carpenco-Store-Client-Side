@@ -16,14 +16,14 @@ const ProductCard = ({ product }) => {
     img,
   } = product;
   return (
-    <div class="card w-fit bg-base-100 shadow-xl lg:mx-0 mx-10 font-montserrat">
+    <div className="card w-fit bg-base-100 shadow-xl lg:mx-0 mx-10 font-montserrat">
       <figure>
         <img className="h-full w-full" src={img} alt="Album" />
       </figure>
-      <div class="card-body">
-        <h2 class="card-title">Product Name: {productName}</h2>
+      <div className="card-body">
+        <h2 className="card-title">Product Name: {productName}</h2>
         <div className="flex items-center">
-          <h2 class="card-title">Price: ${price}</h2>
+          <h2 className="card-title">Price: ${price}</h2>
           <div className="font-bold ml-10">
             <FontAwesomeIcon className="text-warning" icon={faStar} />
             <FontAwesomeIcon className="text-warning" icon={faStar} />
@@ -36,13 +36,13 @@ const ProductCard = ({ product }) => {
             {rating} (1,000+)
           </div>
         </div>
-        <h2 class="card-title">Minimum Quantity: {minQuantity}</h2>
-        <h2 class="card-title">Available Quantity: {aviQuantity}</h2>
+        <h2 className="card-title">Minimum Quantity: {minQuantity}</h2>
+        <h2 className="card-title">Available Quantity: {aviQuantity}</h2>
         <p>{description}</p>
-        <div class="card-actions justify-center pt-5 w-full">
+        <div className="card-actions justify-center pt-5 w-full">
           <button
             onClick={() => navigate(`/purchase/${_id}`)}
-            class="btn btn-outline btn-warning px-16"
+            className="btn btn-outline btn-warning px-16"
           >
             Purchase
           </button>

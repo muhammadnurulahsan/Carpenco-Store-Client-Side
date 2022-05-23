@@ -25,6 +25,7 @@ import NotFound from "./Components/NotFound/NotFound";
 import Footer from "./Components/Footer/Footer";
 import ContactUs from "./Components/ContactUs/ContactUs";
 import ResetPassword from "./Components/ResetPassword/ResetPassword";
+import AllReviews from "./Components/AllReviews/AllReviews";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
         />
         <Route path="/blogs" element={<Blog />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/all-reviews" element={<AllReviews />} />
         <Route path="/my-portfolio" element={<MyPortfolio />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/testimonials" element={<Testimonial />} />

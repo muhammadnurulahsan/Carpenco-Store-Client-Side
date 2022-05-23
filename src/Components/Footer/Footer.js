@@ -12,8 +12,8 @@ const Footer = () => {
         backgroundSize: "cover",
       }}
     >
-      <footer class="footer p-10 text-white py-16">
-        <div class="lg:ml-20">
+      <footer className="footer p-10 text-white py-16">
+        <div className="lg:ml-20">
           <img
             className="w-56"
             src={require("../../Assets/logo-1.png")}
@@ -35,7 +35,7 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <span class="font-bold uppercase text-white">Help</span>
+          <span className="font-bold uppercase text-white">Help</span>
           <Link to="">Orders</Link>
           <Link to="">Career</Link>
           <Link to="">Delivery</Link>
@@ -46,7 +46,7 @@ const Footer = () => {
           <Link to="">Checkout</Link>
         </div>
         <div>
-          <span class="font-bold uppercase text-white">Support</span>
+          <span className="font-bold uppercase text-white">Support</span>
           <Link to="">Big Offers</Link>
           <Link to="">Add To Cart</Link>
           <Link to="">Cookie policy</Link>
@@ -57,7 +57,7 @@ const Footer = () => {
           <Link to="">Customer Reviews</Link>
         </div>
         <div>
-          <span class="font-bold uppercase text-white">Information</span>
+          <span className="font-bold uppercase text-white">Information</span>
           <Link to="">Blog Article</Link>
           <Link to="">All Services</Link>
           <Link to="">Privacy Policy</Link>
@@ -69,16 +69,16 @@ const Footer = () => {
         </div>
       </footer>
       <hr />
-      <div class="lg:flex items-center justify-between lg:px-28 py-4 text-white">
-        <div class="flex items-center justify-center">
+      <div className="lg:flex items-center justify-between lg:px-28 py-4 text-white">
+        <div className="flex items-center justify-center">
           <p>
             Developed By Muhammad Nurul Ahsan <br /> © 2022 Carpenco | All
             rights reserved.
           </p>
         </div>
-        <div class="py-5 lg:py-0">
-          <ul class="flex items-center justify-center">
-            <li class="icon--payment">
+        <div className="py-5 lg:py-0">
+          <ul className="flex items-center justify-center">
+            <li className="icon--payment">
               <svg
                 viewBox="0 0 38 24"
                 xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +102,7 @@ const Footer = () => {
                 ></path>
               </svg>
             </li>
-            <li class="icon--payment">
+            <li className="icon--payment">
               <svg
                 viewBox="0 0 38 24"
                 xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +128,7 @@ const Footer = () => {
                 ></path>
               </svg>
             </li>
-            <li class="icon--payment">
+            <li className="icon--payment">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 role="img"
@@ -155,7 +155,7 @@ const Footer = () => {
                 </g>
               </svg>
             </li>
-            <li class="icon--payment">
+            <li className="icon--payment">
               <svg
                 viewBox="0 0 38 24"
                 xmlns="http://www.w3.org/2000/svg"
@@ -187,7 +187,7 @@ const Footer = () => {
                 ></path>
               </svg>
             </li>
-            <li class="icon--payment">
+            <li className="icon--payment">
               <svg
                 viewBox="0 0 38 24"
                 xmlns="http://www.w3.org/2000/svg"
@@ -211,7 +211,7 @@ const Footer = () => {
                 ></path>
               </svg>
             </li>
-            <li class="icon--payment">
+            <li className="icon--payment">
               <svg
                 viewBox="0 0 38 24"
                 width="38"
@@ -265,12 +265,12 @@ const Footer = () => {
                     y2="9.104"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#F89F20"></stop>
-                    <stop offset=".25" stop-color="#F79A20"></stop>
-                    <stop offset=".533" stop-color="#F68D20"></stop>
-                    <stop offset=".62" stop-color="#F58720"></stop>
-                    <stop offset=".723" stop-color="#F48120"></stop>
-                    <stop offset="1" stop-color="#F37521"></stop>
+                    <stop stopColor="#F89F20"></stop>
+                    <stop offset=".25" stopColor="#F79A20"></stop>
+                    <stop offset=".533" stopColor="#F68D20"></stop>
+                    <stop offset=".62" stopColor="#F58720"></stop>
+                    <stop offset=".723" stopColor="#F48120"></stop>
+                    <stop offset="1" stopColor="#F37521"></stop>
                   </linearGradient>
                   <linearGradient
                     id="pi-paint1_linear"
@@ -280,10 +280,10 @@ const Footer = () => {
                     y2="6.446"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#F58720"></stop>
-                    <stop offset=".359" stop-color="#E16F27"></stop>
-                    <stop offset=".703" stop-color="#D4602C"></stop>
-                    <stop offset=".982" stop-color="#D05B2E"></stop>
+                    <stop stopColor="#F58720"></stop>
+                    <stop offset=".359" stopColor="#E16F27"></stop>
+                    <stop offset=".703" stopColor="#D4602C"></stop>
+                    <stop offset=".982" stopColor="#D05B2E"></stop>
                   </linearGradient>
                 </defs>
               </svg>

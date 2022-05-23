@@ -27,27 +27,27 @@ const MyPortfolio = () => {
       </div>
 
       <div className="lg:mx-28">
-        <div class="hero min-h-screen w-full">
-          <div class="hero-content flex-col lg:flex-row">
+        <div className="hero min-h-screen w-full">
+          <div className="hero-content flex-col lg:flex-row">
             <img
               alt=""
               src={require("../../Assets/about.png")}
-              class="lg:mt-0 mt-16 lg:w-1/3 w-fit"
+              className="lg:mt-0 mt-16 lg:w-1/3 w-fit"
             />
-            <div class="mx-5">
-              <h1 class="font-libreBasker text-4xl lg:mt-0 mt-8">
+            <div className="mx-5">
+              <h1 className="font-libreBasker text-4xl lg:mt-0 mt-8">
                 Assalamualaikum <br /> Warahmatullahi Wabarakatuh
               </h1>
-              <h1 class="font-libreBasker text-2xl pt-6">
+              <h1 className="font-libreBasker text-2xl pt-6">
                 Muhammad Nurul Ahsan
               </h1>
-              <p class="py-6 font-openSans font-light text-lg">
+              <p className="py-6 font-openSans font-light text-lg">
                 Alhamdulillah I'm a student of Qawmi Madrasha at Arabic
                 University of Dhaka. also I'm a student of programming hero
                 batch-5 with a passion for web development. I'm currently
                 learning React.js and Node.js.
               </p>
-              <p class="font-openSans font-light text-lg">
+              <p className="font-openSans font-light text-lg">
                 I'm a Jr. Full Stack Web Developer. I Like To Upgrade My Self
                 Day By Day. I Have A Plan For Next 6 Months. I Will Learn
                 React.js. After That I Will Start Learning Node.js along with
@@ -60,18 +60,18 @@ const MyPortfolio = () => {
             </div>
           </div>
         </div>
-        <div class="hero pb-20 w-full">
-          <div class="hero-content flex-col lg:flex-row-reverse">
+        <div className="hero pb-20 w-full">
+          <div className="hero-content flex-col lg:flex-row-reverse">
             <img
               alt=""
               src={require("../../Assets/goal.png")}
-              class="w-full rounded-lg shadow-2xl"
+              className="w-full rounded-lg shadow-2xl"
             />
-            <div class="mx-4">
-              <h1 class="font-libreBasker text-3xl font-medium lg:mt-0 mt-8">
+            <div className="mx-4">
+              <h1 className="font-libreBasker text-3xl font-medium lg:mt-0 mt-8">
                 What is my goal objective?
               </h1>
-              <p class="font-openSans font-light text-lg pt-6">
+              <p className="font-openSans font-light text-lg pt-6">
                 I want to be a Senior Full Stack professional web developer. The
                 main objective when working as a developer is to be productive
                 and deliver value to the company. To gain confidence and fame
@@ -79,7 +79,7 @@ const MyPortfolio = () => {
                 express my innovative creative skills for self and company
                 growth.
               </p>
-              <p class="font-openSans font-light text-lg py-6">
+              <p className="font-openSans font-light text-lg py-6">
                 To take a challenging role as Front End Web Developer in a
                 highly technical company where I could utilize my skills in Web
                 Design, Front-End Web Development, Software, and CMS/e-Commerce

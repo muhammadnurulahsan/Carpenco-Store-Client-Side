@@ -34,22 +34,22 @@ const Products = () => {
       </div>
       <div className="py-20">
         <div className="">
-          <h2 class="text-5xl text-center font-bold text-gray-800">
-            Our<span class="text-yellow-600"> Available Product</span>
+          <h2 className="text-5xl text-center font-bold text-gray-800">
+            Our<span className="text-yellow-600"> Available Product</span>
           </h2>
         </div>
-        {products.length === 0 ? (
+        {products?.length === 0 ? (
           <Loading></Loading>
         ) : (
           <>
             <div className="mt-20 lg:mx-20 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-              {products.map((product) => (
+              {products?.map((product) => (
                 <ProductCard key={product._id} product={product}></ProductCard>
               ))}
             </div>
             <div className="flex justify-center pt-16">
               <button
-                class="btn btn-outline btn-warning px-20"
+                className="btn btn-outline btn-warning px-20"
                 onClick={() => navigate("/home")}
               >
                 Back To Home

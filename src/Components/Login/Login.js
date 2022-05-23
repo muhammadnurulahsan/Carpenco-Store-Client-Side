@@ -67,10 +67,10 @@ const Login = () => {
 
   return (
     <div className="">
-      <div class="min-w-screen bg-gray-900 flex items-center justify-center lg:py-3  py-16">
-        <div class="font-montserrat rounded-3xl shadow-xl lg:w-[60%] overflow-hidden">
-          <div class="md:flex w-full lg:flex-row-reverse">
-            <div class="hidden md:block w-1/2 bg-indigo-500 px-10">
+      <div className="min-w-screen bg-gray-900 flex items-center justify-center lg:py-3  py-16">
+        <div className="font-montserrat rounded-3xl shadow-xl lg:w-[60%] overflow-hidden">
+          <div className="md:flex w-full lg:flex-row-reverse">
+            <div className="hidden md:block w-1/2 bg-indigo-500 px-10">
               <svg
                 id="a87032b8-5b37-4b7e-a4d9-4dbfbe394641"
                 data-name="Layer 1"
@@ -275,25 +275,25 @@ const Login = () => {
                 />
               </svg>
             </div>
-            <div class="w-full md:w-1/2 bg-white text-gray-900 lg:py-6 py-10 px-5 md:px-10">
-              <div class="text-center">
-                <h1 class="font-bold text-3xl text-gray-900">LOGIN</h1>
-                <p class="py-3">Enter your Information to LOGIN</p>
+            <div className="w-full md:w-1/2 bg-white text-gray-900 lg:py-6 py-10 px-5 md:px-10">
+              <div className="text-center">
+                <h1 className="font-bold text-3xl text-gray-900">LOGIN</h1>
+                <p className="py-3">Enter your Information to LOGIN</p>
               </div>
               <div>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                  <div class="flex -mx-3">
-                    <div class="w-full px-3">
-                      <label for="" class="text-xs font-semibold px-1">
+                  <div className="flex -mx-3">
+                    <div className="w-full px-3">
+                      <label for="" className="text-xs font-semibold px-1">
                         Email
                       </label>
-                      <div class="flex">
-                        <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
+                      <div className="flex">
+                        <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
                           <FontAwesomeIcon icon={faEnvelope} />
                         </div>
                         <input
                           type="email"
-                          class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
+                          className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
                           placeholder="nurulahsan@example.com"
                           {...register("email", {
                             required: {
@@ -321,18 +321,18 @@ const Login = () => {
                       </label>
                     </div>
                   </div>
-                  <div class="flex -mx-3">
-                    <div class="w-full px-3">
-                      <label for="" class="text-xs font-semibold px-1">
+                  <div className="flex -mx-3">
+                    <div className="w-full px-3">
+                      <label for="" className="text-xs font-semibold px-1">
                         Password
                       </label>
-                      <div class="flex">
-                        <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
+                      <div className="flex">
+                        <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
                           <FontAwesomeIcon icon={faLock} />
                         </div>
                         <input
                           type="password"
-                          class="w-full -ml-10 pl-10 pr-3 py-2  rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
+                          className="w-full -ml-10 pl-10 pr-3 py-2  rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
                           placeholder="************"
                           {...register("password", {
                             required: {
@@ -360,7 +360,7 @@ const Login = () => {
                       </label>
                       {errorMessage}
                       <div className="flex justify-between mt-2 mb-3">
-                        <p class="text-sm font-montserrat">
+                        <p className="text-sm font-montserrat">
                           Forget your Password?
                         </p>
                         <Link
@@ -372,22 +372,22 @@ const Login = () => {
                       </div>
                     </div>
                   </div>
-                  <div class="flex -mx-3">
-                    <div class="w-full px-3 mb-3">
+                  <div className="flex -mx-3">
+                    <div className="w-full px-3 mb-3">
                       <button
                         type="submit"
-                        class="block lg:w-full w-[80%] max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700  text-white rounded-lg px-3 py-3 font-semibold"
+                        className="block lg:w-full w-[80%] max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700  text-white rounded-lg px-3 py-3 font-semibold"
                       >
                         LOGIN NOW
                       </button>
                     </div>
                   </div>
                 </form>
-                <div class="divider">OR</div>
+                <div className="divider">OR</div>
                 <div className="flex justify-center my-4">
                   <button
                     onClick={() => signInWithFacebook()}
-                    class="btn-circle shadow-2xl"
+                    className="btn-circle shadow-2xl"
                   >
                     <img
                       className="w-[75%]"
@@ -397,7 +397,7 @@ const Login = () => {
                   </button>
                   <button
                     onClick={() => signInWithGithub()}
-                    class=" btn-circle mx-8"
+                    className=" btn-circle mx-8"
                   >
                     <img
                       className="w-[75%]"
@@ -407,7 +407,7 @@ const Login = () => {
                   </button>
                   <button
                     onClick={() => signInWithGoogle()}
-                    class=" btn-circle"
+                    className=" btn-circle"
                   >
                     <img
                       className="w-[75%]"

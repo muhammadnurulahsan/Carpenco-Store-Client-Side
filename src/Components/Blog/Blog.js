@@ -32,15 +32,15 @@ const Blog = () => {
         <h1 className="text-center font-libreBasker text-4xl lg:my-16 my-10 mx-5">
           How will you improve the <br /> Performance of a React Application?
         </h1>
-        <div class="hero">
-          <div class="hero-content flex-col lg:flex-row">
+        <div className="hero">
+          <div className="hero-content flex-col lg:flex-row">
             <img
               alt=""
               src={blog1}
-              class="w-full rounded-lg drop-shadow-2xl lg:mb-0 mb-10"
+              className="w-full rounded-lg drop-shadow-2xl lg:mb-0 mb-10"
             />
-            <div class="mx-5">
-              <p class="text-base font-montserrat">
+            <div className="mx-5">
+              <p className="text-base font-montserrat">
                 <strong>Other Application:</strong> Performance-related problems
                 in web app is not new. Developers have been encountering these
                 issues since a longer period of time.It boasts of a DOM which is
@@ -51,7 +51,7 @@ const Blog = () => {
                 can solve the performance related problems in React based web
                 app.
               </p>
-              <p class="text-base font-montserrat pt-6">
+              <p className="text-base font-montserrat pt-6">
                 <strong>React Application:</strong> There Are Many Ways To
                 Improve A React App Performance. Like, We can use setState
                 instead of directly set a state. so it will re-render the
@@ -71,15 +71,15 @@ const Blog = () => {
           What are the different ways to manage <br /> a state in a React
           application?
         </h1>
-        <div class="hero">
-          <div class="hero-content flex-col lg:flex-row-reverse">
+        <div className="hero">
+          <div className="hero-content flex-col lg:flex-row-reverse">
             <img
               alt=""
               src={blog2}
-              class="w-full rounded-lg drop-shadow-2xl lg:mb-0 mb-10"
+              className="w-full rounded-lg drop-shadow-2xl lg:mb-0 mb-10"
             />
             <div className="mx-5">
-              <p class="text-base font-montserrat">
+              <p className="text-base font-montserrat">
                 <strong>In a react app we can manage state in 6-7 ways.</strong>{" "}
                 <br />
                 <strong>1. Local state</strong> <br />
@@ -104,15 +104,15 @@ const Blog = () => {
         <h1 className="text-center font-libreBasker text-4xl lg:my-16 my-10 mx-4">
           How does prototypical inheritance work?
         </h1>
-        <div class="hero">
-          <div class="hero-content flex-col lg:flex-row">
+        <div className="hero">
+          <div className="hero-content flex-col lg:flex-row">
             <img
               alt=""
               src={blog3}
-              class="w-full rounded-lg drop-shadow-2xl lg:mb-0 mb-10"
+              className="w-full rounded-lg drop-shadow-2xl lg:mb-0 mb-10"
             />
-            <div class="mx-5">
-              <p class="text-base font-montserrat">
+            <div className="mx-5">
+              <p className="text-base font-montserrat">
                 <strong>JavaScript Prototype:</strong> JavaScript is a
                 prototype-based, Object-Oriented programming language. After the
                 ES6 updates, JavaScript allowed for “prototypal inheritance”,
@@ -121,7 +121,7 @@ const Blog = () => {
                 structure (data fields), behavior (functions / methods), and
                 state (data values).
               </p>
-              <p class="text-base font-montserrat pt-6">
+              <p className="text-base font-montserrat pt-6">
                 <strong>Prototypal Inheritance:</strong> The Prototypal
                 Inheritance is a feature in javascript used to add methods and
                 properties to objects. It is a method by which an object can
@@ -141,15 +141,15 @@ const Blog = () => {
           Why you do not set <br />
           products = [...] instead, <br /> you use the setProducts!
         </h1>
-        <div class="hero">
-          <div class="hero-content flex-col lg:flex-row-reverse">
+        <div className="hero">
+          <div className="hero-content flex-col lg:flex-row-reverse">
             <img
               alt=""
               src={blog4}
-              class="w-full rounded-lg drop-shadow-2xl lg:mb-0 mb-10"
+              className="w-full rounded-lg drop-shadow-2xl lg:mb-0 mb-10"
             />
-            <div class="mx-4">
-              <p class="text-base font-montserrat">
+            <div className="mx-4">
+              <p className="text-base font-montserrat">
                 The state starts as count: 0 , and we increment state.count when
                 the user clicks a button by calling this.setState(). We’ll use
                 snippets from this class throughout the page. When I change the
@@ -158,7 +158,7 @@ const Blog = () => {
                 undefined error, when the product is defined as a result of the
                 setProduct call.
               </p>
-              <p class="text-base font-montserrat pt-6">
+              <p className="text-base font-montserrat pt-6">
                 If we set a state without setState it will mutate the state,
                 which means it will not trigger re-render. instead it will
                 create a new state. using setState returns a new state and does
@@ -182,22 +182,22 @@ const Blog = () => {
           description, etc. How will you implement <br /> a search to find
           products by name?
         </h1>
-        <div class="hero">
-          <div class="hero-content flex-col lg:flex-row">
+        <div className="hero">
+          <div className="hero-content flex-col lg:flex-row">
             <img
               alt=""
               src={blog5}
-              class="w-full rounded-lg drop-shadow-2xl lg:mb-0 mb-10"
+              className="w-full rounded-lg drop-shadow-2xl lg:mb-0 mb-10"
             />
             <div className="mx-4">
-              <p class="text-base font-montserrat">
+              <p className="text-base font-montserrat">
                 We Can Do It Many Ways. There are plenty of array methods to do
                 these kind of searching. if we need a single result we can use
                 find method. it will return a single value. if we need condition
                 based result we can use filter method. it will return us a array
                 containing the result.
               </p>
-              <p class="text-base font-montserrat lg:mt-10 mt-6">
+              <p className="text-base font-montserrat lg:mt-10 mt-6">
                 Approach: Create two extra space, i.e. two extra arrays to store
                 the product of all the array elements from start, up to that
                 index and another array to store the product of all the array
@@ -214,15 +214,15 @@ const Blog = () => {
         <h1 className="text-center font-libreBasker text-4xl my-16">
           What is a unit test? <br /> Why should write unit tests?
         </h1>
-        <div class="hero">
-          <div class="hero-content flex-col lg:flex-row-reverse">
+        <div className="hero">
+          <div className="hero-content flex-col lg:flex-row-reverse">
             <img
               alt=""
               src={blog6}
-              class="w-full rounded-lg drop-shadow-2xl lg:mb-0 mb-10"
+              className="w-full rounded-lg drop-shadow-2xl lg:mb-0 mb-10"
             />
             <div className="mx-4">
-              <p class="text-base font-montserrat">
+              <p className="text-base font-montserrat">
                 <strong>Unit Test:</strong> Unit testing is a method of testing
                 the smallest pieces of code, typically individual functions.
                 These small pieces of code are called units. Unit testing helps
@@ -234,7 +234,7 @@ const Blog = () => {
                 ensure that it is coded correctly with no errors, and that it
                 returns the expected outputs for all relevant inputs.
               </p>
-              <p class="text-base font-montserrat pt-6">
+              <p className="text-base font-montserrat pt-6">
                 <strong>The Unit Test Benefit:</strong> Unit testing allows
                 software developers to actually think through the design of the
                 software and what has to be done before they write the code.

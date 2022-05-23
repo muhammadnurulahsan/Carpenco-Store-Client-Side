@@ -75,9 +75,9 @@ const ResetPassword = () => {
                   <input
                     type="checkbox"
                     checked="checked"
-                    class="checkbox checkbox-accent mr-4"
+                    className="checkbox checkbox-accent mr-4"
                   />
-                  <p class="my-5">
+                  <p className="my-5">
                     I accept the
                     <span className="text-blue-700">Terms and Conditions</span>
                   </p>
@@ -89,7 +89,7 @@ const ResetPassword = () => {
                   value="Reset password"
                 />
                 <Link to="/login">
-                  <p class="text-base font-montserrat mt-5 text-center">
+                  <p className="text-base font-montserrat mt-5 text-center">
                     <FontAwesomeIcon icon={faArrowLeftLong} className="mr-3" />
                     Back to Login
                   </p>
