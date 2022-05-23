@@ -1,23 +1,21 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 const useAdmin = (user) => {
-    const [admin, setAdmin] = useState(false);
-    const [adminLoading, setAdminLoading] = useState(true);
+  const [admin, setAdmin] = useState(false);
+  const [adminLoading, setAdminLoading] = useState(true);
 
-    useEffect(()=>{
-        const email = user?.email;
-
-        if(email){
-            axios.get(`https://agile-atoll-96122.herokuapp.com/admin/${email}`)
-            .then(data => {
-                setAdmin(data?.data?.admin)
-                setAdminLoading(false)
-            }) 
-        }
-
-    },[user])
-    return [admin, adminLoading];
+  useEffect(() => {
+    const email = user?.email;
+    if (email) {
+      axios.get(`https://carpenco-store.herokuapp.com/admin/${email}`)
+      .then((data) => {
+        setAdmin(data?.data?.admin);
+        setAdminLoading(false);
+      });
+    }
+  }, [user, setAdmin, setAdminLoading]);
+  return [admin, adminLoading];
 };
 
 export default useAdmin;

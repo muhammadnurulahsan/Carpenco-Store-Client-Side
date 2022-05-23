@@ -9,7 +9,7 @@ const useToken = (user) => {
     const currentUser = { name: name, email: email };
 
     if (email) {
-      fetch(`https://agile-atoll-96122.herokuapp.com/user/${email}`, {
+      fetch(`https://carpenco-store.herokuapp.com/user/${email}`, {
         method: "PUT",
         headers: {
           "content-type": "application/json",

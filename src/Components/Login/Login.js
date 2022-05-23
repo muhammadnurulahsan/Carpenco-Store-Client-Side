@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 import React, { useEffect } from "react";
 import {
+  useAuthState,
   useSignInWithEmailAndPassword,
   useSignInWithFacebook,
   useSignInWithGithub,
@@ -12,8 +13,10 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import Loading from "./../Loading/Loading";
 import swal from "sweetalert";
+import useToken from "../../Hooks/useToken";
 
 const Login = () => {
+  const [user] = useAuthState(auth);
   const [signInWithEmailAndPassword, emailUser, emailLoading, emailError] =
     useSignInWithEmailAndPassword(auth);
 
@@ -30,8 +33,12 @@ const Login = () => {
   const location = useLocation();
   const from = location?.state?.from || "/";
 
+  const [token] = useToken(
+    user || emailUser?.user || googleUser?.user || fbUser?.user || gitUser?.user
+  );
+
   useEffect(() => {
-    if (googleUser || emailUser || fbUser || gitUser) {
+    if (token) {
       swal({
         title: "Login Successful!",
         text: "Welcome back!",
@@ -39,7 +46,7 @@ const Login = () => {
       });
       navigate(from, { replace: true });
     }
-  }, [googleUser, emailUser, navigate, from, fbUser, gitUser]);
+  }, [token, navigate, from, user]);
 
   const onSubmit = (data) => {
     signInWithEmailAndPassword(data.email, data.password);
@@ -284,7 +291,7 @@ const Login = () => {
                 <form onSubmit={handleSubmit(onSubmit)}>
                   <div className="flex -mx-3">
                     <div className="w-full px-3">
-                      <label for="" className="text-xs font-semibold px-1">
+                      <label htmlFor="" className="text-xs font-semibold px-1">
                         Email
                       </label>
                       <div className="flex">
@@ -323,7 +330,7 @@ const Login = () => {
                   </div>
                   <div className="flex -mx-3">
                     <div className="w-full px-3">
-                      <label for="" className="text-xs font-semibold px-1">
+                      <label htmlFor="" className="text-xs font-semibold px-1">
                         Password
                       </label>
                       <div className="flex">

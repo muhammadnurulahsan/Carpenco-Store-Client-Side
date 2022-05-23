@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -6,10 +7,9 @@ const useProductsDetail = () => {
   const [products, setProducts] = useState({});
 
   useEffect(() => {
-    const url = `https://carpenco-store.herokuapp.com/products/${id}`;
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
+    axios
+      .get(`https://carpenco-store.herokuapp.com/products/${id}`)
+      .then((data) => setProducts(data.data));
   }, [id, products, setProducts]);
   return [products, id];
 };

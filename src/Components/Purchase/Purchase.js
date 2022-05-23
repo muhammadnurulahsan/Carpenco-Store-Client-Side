@@ -1,27 +1,94 @@
 import React, { useEffect, useState } from "react";
-import useProductsDetail from "../../Hooks/useProductsDetail";
 import "./Purchase.css";
 import bg from "../../Assets/detail.jpg";
 import plus from "../../Assets/plus.png";
 import minus from "../../Assets/minus.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faStarHalfStroke } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import auth from "../../firebase.init";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { useForm } from "react-hook-form";
+// import useUser from "./../../Hooks/useUser";
+import { useNavigate } from "react-router-dom";
+import swal from "sweetalert";
+import useProductsDetail from "./../../Hooks/useProductsDetail";
 
 const Purchase = () => {
+  const navigate = useNavigate();
+  const { id } = useParams();
+  const [products] = useProductsDetail({});
   const [user] = useAuthState(auth);
-  const [products] = useProductsDetail();
+  const { register, handleSubmit } = useForm();
+  // const { data: userData } = useUser(user);
+
+  const onSubmit = (data) => {
+    const order = {
+      img: img,
+      name: productName,
+      orderQuantity: inputValue,
+      totalPrice: parsedPrice * inputValue,
+      customer: user?.displayName,
+      customerEmail: user?.email,
+      address: data.address,
+      phone: data.phone,
+      // status: "Unpaid",
+      orderStatus: "Uncomplete",
+      paymentStatus: "Unpaid",
+    };
+
+    fetch("https://carpenco-store.herokuapp.com/orders", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        authorization: `bearer ${localStorage.getItem("accessToken")}`,
+        "Access-Control-Allow-Origin": "*",
+      },
+      body: JSON.stringify(order),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.acknowledged) {
+          const newQuantity = minQuantity - parseInt(inputValue);
+          fetch(`https://carpenco-store.herokuapp.com/products/${id}`, {
+            method: "PUT",
+            headers: {
+              "content-type": "application/json",
+              "Access-Control-Allow-Origin": "*",
+            },
+            body: JSON.stringify({ newQuantity }),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              if (data.acknowledged) {
+                swal({
+                  title: "Success",
+                  text: "Order has been placed successfully",
+                  icon: "success",
+                  button: "OK",
+                });
+                navigate("/dashboard/my-orders");
+              }
+            });
+        } else {
+          swal({
+            title: "Error",
+            text: "Something went wrong",
+            icon: "error",
+            button: "OK",
+          });
+        }
+      });
+  };
+
   const {
-    _id,
-    productName,
+    img,
     price,
+    rating,
     minQuantity,
+    productName,
     aviQuantity,
     description,
-    rating,
-    img,
   } = products;
 
   const parsedPrice = parseInt(price);
@@ -88,7 +155,7 @@ const Purchase = () => {
               >
                 <path
                   strokeLinecap="round"
-                  stroke-linejoin="round"
+                  strokeLinejoin="round"
                   strokeWidth="2"
                   d="M9 5l7 7-7 7"
                 />
@@ -110,7 +177,7 @@ const Purchase = () => {
               >
                 <path
                   strokeLinecap="round"
-                  stroke-linejoin="round"
+                  strokeLinejoin="round"
                   strokeWidth="2"
                   d="M9 5l7 7-7 7"
                 />
@@ -180,7 +247,7 @@ const Purchase = () => {
                     <h2 className="text-center font-montserrat font-medium text-4xl">
                       Confirm Your Purchase
                     </h2>
-                    <form onSubmit="{handleSubmit}">
+                    <form onSubmit={handleSubmit(onSubmit)}>
                       <div className="form-control w-full">
                         <label className="label">
                           <span className="label-text text-base	font-medium">
@@ -189,7 +256,6 @@ const Purchase = () => {
                         </label>
                         <input
                           type="name"
-                          name="name"
                           disabled
                           placeholder={user.displayName}
                           className="input input-bordered font-black input-success w-full"
@@ -202,7 +268,6 @@ const Purchase = () => {
                         </label>
                         <input
                           type="email"
-                          name="email"
                           disabled
                           placeholder={user.email}
                           className="input input-bordered font-black input-success w-full "
@@ -215,9 +280,10 @@ const Purchase = () => {
                         </label>
                         <input
                           type="number"
-                          name="name"
+                          required
                           placeholder="Enter your phone number"
                           className="input input-bordered input-success w-full"
+                          {...register("phone", { required: true })}
                         />
 
                         <label className="label">
@@ -227,9 +293,10 @@ const Purchase = () => {
                         </label>
                         <textarea
                           type="text"
-                          name="message"
+                          required
                           className="textarea textarea-success"
-                          placeholder="Enter Your Address"
+                          placeholder="Dhaka, Bangladesh"
+                          {...register("address", { required: true })}
                         ></textarea>
                         <div className="flex mt-8">
                           <button

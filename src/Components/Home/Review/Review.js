@@ -8,10 +8,10 @@ const Review = () => {
   const [reviews] = useReview();
   const navigate = useNavigate();
   return (
-    <div class="mb-16">
-      <div class="container flex justify-center mx-auto pt-16">
+    <div className="mb-16">
+      <div className="container flex justify-center mx-auto pt-16">
         <div>
-          <p class="text-gray-500 text-lg text-center font-normal py-6 uppercase">
+          <p className="text-gray-500 text-lg text-center font-normal py-6 uppercase">
             customer reviews
           </p>
           <h2 className="text-5xl text-center text-gray-800 font-bold  pb-16 uppercase">
@@ -22,8 +22,8 @@ const Review = () => {
       {reviews?.length === 0 ? (
         <Loading></Loading>
       ) : (
-        <div class="w-full bg-gray-100 px-10 pt-10 lg:pb-0">
-          <div class="container mx-auto pt-14">
+        <div className="w-full bg-gray-100 px-10 pt-10 lg:pb-0">
+          <div className="container mx-auto pt-14">
             <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
               {reviews?.slice(0, 6).map((review) => (
                 <ReviewCard key={review._id} review={review}></ReviewCard>

@@ -1,0 +1,7 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css);
+.bg-random {
+  /* @apply bg-cover bg-center */
+  background-image: url(https://source.unsplash.com/900x300/?code,gradient,dark);
+  background-size: cover;
+  background-position: center;
+}

@@ -3,22 +3,18 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'openSans': ['Open Sans', 'sans-serif'],
-        'iBMPlex': ['IBM Plex Sans', 'serif'],
-        'libreBasker': ['Libre Baskerville', 'sans-serif'],
-        'montserrat': ['Montserrat', 'sans-serif']
+        openSans: ["Open Sans", "sans-serif"],
+        iBMPlex: ["IBM Plex Sans", "serif"],
+        libreBasker: ["Libre Baskerville", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
-      //       font-family: '', ;
-      // font-family: '', serif;
-      // font-family: '', sans-serif;
-      // font-family: '', sans-serif;
     },
   },
   daisyui: {
     themes: [
       {
         carpenco: {
-          primary: "#a991f7",
+          primary: "#f1ca85",
           secondary: "#f6d860",
           accent: "#37cdbe",
           neutral: "#3d4451",

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Charles Keith",
+    "email": "Charleskeith@gmai.com",
+    "rating": 5,
+    "reviewText": "Great service. Very friendly. Would recommend.",
+    "img": "https://carpenco-review.netlify.app/AndresBerlin.jpg"
+  },
+  {
+    "name": "Rachel Adams",
+    "email": "Racheladams@gmai.com",
+    "rating": 5,
+    "reviewText": "Great service. Very friendly. Would recommend.",
+    "img": "https://carpenco-review.netlify.app/CharlesKeith.jpg"
+  },
+  {
+    "name": "Dean Jones",
+    "email": "Deanjones@gmai.com",
+    "rating": 5,
+    "reviewText": "Great service. Very friendly. Would recommend.",
+    "img": "https://carpenco-review.netlify.app/DeanJones.jpg"
+  },
+  {
+    "name": "Johnson Stone",
+    "email": "Johnsonstone@gmai.com",
+    "rating": 5,
+    "reviewText": "Great service. Very friendly. Would recommend.",
+    "img": "https://carpenco-review.netlify.app/RachelAdams.jpg"
+  },
+  {
+    "name": "Silene Tokyo",
+    "email": "Sileneyokyo@gmai.com",
+    "rating": 5,
+    "reviewText": "Great service. Very friendly. Would recommend.",
+    "img": "https://carpenco-review.netlify.app/SileneTokyo.jpg"
+  },
+  {
+    "name": "Andres Berlin",
+    "email": "Andresberlin@gmai.com",
+    "rating": 5,
+    "reviewText": "Great service. Very friendly. Would recommend.",
+    "img": "https://carpenco-review.netlify.app/JohnsonStone.jpg"
+  }
+]

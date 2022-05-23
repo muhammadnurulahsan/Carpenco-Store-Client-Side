@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 import {
+  useAuthState,
   useCreateUserWithEmailAndPassword,
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
@@ -10,8 +11,10 @@ import { Link, useNavigate } from "react-router-dom";
 import auth from "./../../firebase.init";
 import Loading from "../Loading/Loading";
 import swal from "sweetalert";
+import useToken from "../../Hooks/useToken";
 
 const Register = () => {
+  const [user] = useAuthState(auth);
   const [
     createUserWithEmailAndPassword,
     createUser,
@@ -27,8 +30,11 @@ const Register = () => {
       displayName: data.name,
     });
   };
+
+  const [token] = useToken(user || createUser?.user);
+
   useEffect(() => {
-    if (createUser) {
+    if (token) {
       swal({
         title: "Account created!",
         text: "Please check your email to verify your account.",
@@ -36,7 +42,7 @@ const Register = () => {
       });
       navigate("/home");
     }
-  }, [navigate, createUser, updateProfile, createUserWithEmailAndPassword]);
+  }, [token, navigate, user]);
 
   const {
     register,
@@ -278,7 +284,7 @@ const Register = () => {
                 <form onSubmit={handleSubmit(onSubmit)}>
                   <div className="flex -mx-3">
                     <div className="w-full px-3">
-                      <label for="" className="text-xs font-semibold px-1">
+                      <label htmlFor="" className="text-xs font-semibold px-1">
                         Your Name
                       </label>
                       <div className="flex">
@@ -313,7 +319,7 @@ const Register = () => {
                   </div>
                   <div className="flex -mx-3">
                     <div className="w-full px-3">
-                      <label for="" className="text-xs font-semibold px-1">
+                      <label htmlFor="" className="text-xs font-semibold px-1">
                         Email
                       </label>
                       <div className="flex">
@@ -352,7 +358,7 @@ const Register = () => {
                   </div>
                   <div className="flex -mx-3">
                     <div className="w-full px-3 mb-3">
-                      <label for="" className="text-xs font-semibold px-1">
+                      <label htmlFor="" className="text-xs font-semibold px-1">
                         Password
                       </label>
                       <div className="flex">

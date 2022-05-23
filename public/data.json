@@ -2,8 +2,8 @@
   {
     "productName": "Hand Saw",
     "price": 130,
-    "minQuantity": 150,
-    "aviQuantity": 1000,
+    "minQuantity": 20,
+    "aviQuantity": 200,
     "description": "The familiar modern handsaw, with its thin but wide steel blade, cuts on the push stroke; this permits down hand sawing on wood laid across the knee or on a stool, and the sawing pressure helps to hold the wood still.",
     "rating": 4.9,
     "img": "https://carpenco-img.netlify.app/HandSaw.jpg"
@@ -11,8 +11,8 @@
   {
     "productName": "Marking Gauge",
     "price": 119,
-    "minQuantity": 150,
-    "aviQuantity": 1000,
+    "minQuantity": 20,
+    "aviQuantity": 200,
     "description": "A marking gauge, also known as a scratch gauge, is used in woodworking and to mark out lines for cutting or other operations. The purpose of the gauge is to scribe a line parallel to a reference edge or surface. It is used in joinery and sheet metal operations.",
     "rating": 4.9,
     "img": "https://carpenco-img.netlify.app/MarkingGauge.jpg"
@@ -20,8 +20,8 @@
   {
     "productName": "Woodwork Tools",
     "price": 170,
-    "minQuantity": 150,
-    "aviQuantity": 1000,
+    "minQuantity": 20,
+    "aviQuantity": 200,
     "description": "Those are tools to cut, finish, assemble, measure and hold wooden parts while transforming raw materials into completed projects. These tool groups cover everything a starting woodworker needs for building simple to complex items.",
     "rating": 4.9,
     "img": "https://carpenco-img.netlify.app/WoodworkTools.jpg"
@@ -29,8 +29,8 @@
   {
     "productName": "Hammer",
     "price": 1380,
-    "minQuantity": 150,
-    "aviQuantity": 1000,
+    "minQuantity": 20,
+    "aviQuantity": 200,
     "description": "Hammers are used for general carpentry, framing, nail pulling, cabinet making, assembling furniture, upholstering, finishing, riveting, bending or shaping metal, striking masonry drill and steel chisels, and so on.",
     "rating": 4.9,
     "img": "https://carpenco-img.netlify.app/Hammer.jpg"
@@ -38,8 +38,8 @@
   {
     "productName": "Paint Brush",
     "price": 130,
-    "minQuantity": 150,
-    "aviQuantity": 1000,
+    "minQuantity": 20,
+    "aviQuantity": 200,
     "description": "A paintbrush is a brush used to apply paint or ink. A paintbrush is usually made by clamping bristles to a handle with a ferrule. They are available in various sizes, shapes, and materials Paintbrushes are used.",
     "rating": 4.9,
     "img": "https://carpenco-img.netlify.app/PaintBrush.jpg"
@@ -47,8 +47,8 @@
   {
     "productName": "Carpenters Chisel",
     "price": 170,
-    "minQuantity": 150,
-    "aviQuantity": 1000,
+    "minQuantity": 20,
+    "aviQuantity": 200,
     "description": "Carpenter's chisel is especially suitable for rough jobs, where heavy blows are needed. Robust forged blade is made of traditional Cr-Mn steel and is heat treated to 59 HRc. Bulky handle from hard and hefty hornbeam.",
     "rating": 4.9,
     "img": "https://carpenco-img.netlify.app/CarpentersChisel.jpg"
@@ -56,8 +56,8 @@
   {
     "productName": "Pliers",
     "price": 230,
-    "minQuantity": 150,
-    "aviQuantity": 1000,
+    "minQuantity": 20,
+    "aviQuantity": 200,
     "description": "Pliers, hand-operated tool for holding and gripping small articles or for bending and cutting wire. Slip-joint pliers have grooved jaws, and the pivot hole in one member is elongated so that the member.",
     "rating": 4.9,
     "img": "https://carpenco-img.netlify.app/Pliers.jpg"
@@ -65,8 +65,8 @@
   {
     "productName": "Caliper",
     "price": 250,
-    "minQuantity": 150,
-    "aviQuantity": 1000,
+    "minQuantity": 20,
+    "aviQuantity": 200,
     "description": "Calipers are used to measure the distance between two opposite sides of an object. They are very simple measuring instruments and have an inward and outward point, just like a compass. caliper, also spelled calliper.",
     "rating": 4.9,
     "img": "https://carpenco-img.netlify.app/Caliper.jpg"
@@ -74,8 +74,8 @@
   {
     "productName": "C-Clamp",
     "price": 300,
-    "minQuantity": 150,
-    "aviQuantity": 1000,
+    "minQuantity": 20,
+    "aviQuantity": 200,
     "description": "A C-clamp or G-clamp or G-cramp is a type of clamp device typically used to hold a wood or metal workpiece, and often used in, but are not limited to, carpentry and welding.Often believed that these clamps.",
     "rating": 4.9,
     "img": "https://carpenco-img.netlify.app/CClamp.jpg"

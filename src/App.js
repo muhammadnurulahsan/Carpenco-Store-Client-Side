@@ -7,14 +7,12 @@ import Purchase from "./Components/Purchase/Purchase";
 import RequireAuth from "./Components/RequireAuth/RequireAuth";
 import Blog from "./Components/Blog/Blog";
 import MyPortfolio from "./Components/MyPortfolio/MyPortfolio";
-import Testimonial from "./Components/Testimonial/Testimonial";
 import Products from "./Components/Products/Products";
 import Register from "./Components/Register/Register";
 import Login from "./Components/Login/Login";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import MyProfile from "./Components/Dashboard/MyProfile/MyProfile";
 import MyOrders from "./Components/Dashboard/MyOrders/MyOrders";
-import Payment from "./Components/Payment/Payment";
 import AddReview from "./Components/Dashboard/AddReview/AddReview";
 import RequireAdmin from "./Components/RequireAdmin/RequireAdmin";
 import ManageProducts from "./Components/Dashboard/ManageProducts/ManageProducts";
@@ -26,8 +24,13 @@ import Footer from "./Components/Footer/Footer";
 import ContactUs from "./Components/ContactUs/ContactUs";
 import ResetPassword from "./Components/ResetPassword/ResetPassword";
 import AllReviews from "./Components/AllReviews/AllReviews";
+import useScrollToTop from "./Hooks/useScrollToTop";
+import MyReview from "./Components/Dashboard/MyReview/MyReview";
+import UpdateProfile from "./Components/Dashboard/UpdateProfile/UpdateProfile";
+import Payment from "./Components/Dashboard/Payment/Payment";
 
 function App() {
+  useScrollToTop();
   return (
     <div>
       <Header></Header>
@@ -47,7 +50,6 @@ function App() {
         <Route path="/all-reviews" element={<AllReviews />} />
         <Route path="/my-portfolio" element={<MyPortfolio />} />
         <Route path="/reset-password" element={<ResetPassword />} />
-        <Route path="/testimonials" element={<Testimonial />} />
         <Route
           path="/products"
           element={
@@ -68,10 +70,12 @@ function App() {
         >
           <Route index element={<MyProfile />} />
           <Route path="my-orders" element={<MyOrders />} />
+          <Route path="my-reviews" element={<MyReview />} />
           <Route path="payment/:id" element={<Payment />} />
           <Route path="add-review" element={<AddReview />} />
+          <Route path="update-profile" element={<UpdateProfile />} />
           <Route
-            path="manageproducts"
+            path="manage-products"
             element={
               <RequireAdmin>
                 <ManageProducts />
@@ -79,7 +83,7 @@ function App() {
             }
           />
           <Route
-            path="addproduct"
+            path="add-product"
             element={
               <RequireAdmin>
                 <AddProduct />
@@ -87,7 +91,7 @@ function App() {
             }
           />
           <Route
-            path="makeadmin"
+            path="manage-user"
             element={
               <RequireAdmin>
                 <ManageUser />
@@ -95,7 +99,7 @@ function App() {
             }
           />
           <Route
-            path="manageorders"
+            path="manage-orders"
             element={
               <RequireAdmin>
                 <ManageOrders />

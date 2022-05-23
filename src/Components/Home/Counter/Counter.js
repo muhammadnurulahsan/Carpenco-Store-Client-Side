@@ -16,7 +16,7 @@ const Counter = () => {
                   <div className="flex justify-center items-center">
                     <img src={box} className="w-20 mb-2" alt="" />
                   </div>
-                  <CountUp end={17190} duration={20} />+
+                  <CountUp end={17190} duration={40} />+
                 </p>
                 <p className="text-2xl font-medium text-gray-800">
                   PRODUCT FOR SALE
@@ -30,7 +30,7 @@ const Counter = () => {
                   <div className="flex justify-center items-center">
                     <img src={review} className="w-20 mb-4" alt="" />
                   </div>
-                  <CountUp end={11502} duration={20} />+
+                  <CountUp end={11502} duration={40} />+
                 </p>
                 <p className="text-2xl font-medium text-gray-800">
                   SELLER REVIEWS
@@ -43,7 +43,7 @@ const Counter = () => {
                   <div className="flex justify-center items-center">
                     <img src={visitor} className="w-20" alt="" />
                   </div>
-                  <CountUp end={21450} duration={20} />+
+                  <CountUp end={21450} duration={40} />+
                 </p>
                 <p className="text-2xl font-medium text-gray-800">
                   VISITORS PER DAY
@@ -56,7 +56,7 @@ const Counter = () => {
                   <div className="flex justify-center items-center">
                     <img src={verify} className="w-20" alt="" />
                   </div>
-                  <CountUp end={36302} duration={20} />+
+                  <CountUp end={36302} duration={40} />+
                 </p>
                 <p className="text-2xl font-medium text-gray-800">
                   VERIFIED DEALERS

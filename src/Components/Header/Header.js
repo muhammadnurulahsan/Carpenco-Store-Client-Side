@@ -4,9 +4,12 @@ import { signOut } from "firebase/auth";
 import { Link } from "react-router-dom";
 import avatar from "../../Assets/user-avatar.jpg";
 import auth from "../../firebase.init";
+import CustomLink from "../CustomLink/CustomLink";
+import useAdmin from "../../Hooks/useAdmin";
 
 const Header = () => {
   const [user] = useAuthState(auth);
+  const [admin] = useAdmin(user);
   const logout = () => {
     signOut(auth);
   };
@@ -14,37 +17,37 @@ const Header = () => {
   const menuItems = (
     <>
       <li>
-        <Link to="/home">Home</Link>
+        <CustomLink to="/home">Home</CustomLink>
       </li>
       <li>
-        <Link to="/blogs">Blogs</Link>
+        <CustomLink to="/blogs">Blogs</CustomLink>
       </li>
       <li>
-        <Link to="/my-portfolio">My Portfolio</Link>
+        <CustomLink to="/my-portfolio">My Portfolio</CustomLink>
       </li>
       <li>
-        <Link to="/contact-us">Contact Us</Link>
+        <CustomLink to="/contact-us">Contact Us</CustomLink>
       </li>
       {user && (
         <li>
-          <Link to="/dashboard">Dashboard</Link>
+          <CustomLink to="/dashboard">Dashboard</CustomLink>
         </li>
       )}
 
       {!user && (
         <>
           <li>
-            <Link to="/login">Login</Link>
+            <CustomLink to="/login">Login</CustomLink>
           </li>
           <li>
-            <Link to="/register">Register</Link>
+            <CustomLink to="/register">Register</CustomLink>
           </li>
         </>
       )}
     </>
   );
   return (
-    <div>
+    <div className="sticky top-0 bg-amber-100 z-50">
       <div className="navbar justify-between lg:px-20">
         <div className="navbar-start">
           <div className="dropdown">
@@ -71,7 +74,7 @@ const Header = () => {
               {menuItems}
             </ul>
           </div>
-          <Link to="#">
+          <Link to="/">
             <img
               className="w-56"
               src={require("../../Assets/logo-1.png")}
@@ -97,7 +100,7 @@ const Header = () => {
                     >
                       <path
                         strokeLinecap="round"
-                        stroke-linejoin="round"
+                        strokeLinejoin="round"
                         strokeWidth="2"
                         d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                       />
@@ -136,21 +139,61 @@ const Header = () => {
                 >
                   <li>
                     {!user.displayName ? (
-                      <h6 className="font-bold">Hello! User</h6>
+                      <h6 className="font-bold text-teal-300"> Hello! User</h6>
                     ) : (
-                      <h6 className="font-bold">Hello! {user.displayName}</h6>
+                      <h6 className="font-bold text-teal-300">
+                        Hello! {user.displayName}
+                      </h6>
                     )}
                   </li>
-                  <li>
-                    <Link to="/dashboard/my-orders" className="justify-between">
-                      My Orders
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/dashboard/my-orders" className="justify-between">
-                      Manage My Account
-                    </Link>
-                  </li>
+                  {admin ? (
+                    <>
+                      <li>
+                        <CustomLink to="/dashboard">My Profile</CustomLink>
+                      </li>
+                      <li>
+                        <CustomLink to="/dashboard/manage-user">
+                          Manage User
+                        </CustomLink>
+                      </li>
+                      <li>
+                        <CustomLink to="/dashboard/manage-orders">
+                          Manage All Orders
+                        </CustomLink>
+                      </li>
+                      <li>
+                        <CustomLink to="/dashboard/add-product">
+                          Add product
+                        </CustomLink>
+                      </li>
+                      <li>
+                        <CustomLink to="/dashboard/manage-products">
+                          Manage Product
+                        </CustomLink>
+                      </li>
+                    </>
+                  ) : (
+                    <>
+                      <li>
+                        <CustomLink to="/dashboard">My Profile</CustomLink>
+                      </li>
+                      <li>
+                        <CustomLink to="/dashboard/my-reviews">
+                          My Review
+                        </CustomLink>
+                      </li>
+                      <li>
+                        <CustomLink to="/dashboard/my-orders">
+                          My Orders
+                        </CustomLink>
+                      </li>
+                      <li>
+                        <CustomLink to="/dashboard/add-review">
+                          Add A Review
+                        </CustomLink>
+                      </li>
+                    </>
+                  )}
                   <li>
                     <Link onClick={logout} to="#">
                       Sign Out
@@ -159,28 +202,6 @@ const Header = () => {
                 </ul>
               </div>
             </div>
-            {/* <div className="navbar-end lg:hidden">
-              <label
-                tabIndex="1"
-                htmlFor="dashboard-sidebar"
-                className="btn btn-ghost lg:hidden"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h8m-8 6h16"
-                  />
-                </svg>
-              </label>
-            </div> */}
           </>
         )}
       </div>
