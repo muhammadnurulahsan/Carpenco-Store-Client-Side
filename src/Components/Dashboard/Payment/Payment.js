@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "react-query";
 import { Elements } from "@stripe/react-stripe-js";
 import PaymentForm from "../PaymentForm/PaymentForm";
+// import "./Payment.css";
 
 const stripePromise = loadStripe(
   "pk_test_51L5YRmB4bgoHxdHX6lNi6GMhjx3e7mdTs3Lhxxd40Urp5TjgX99sAafo2bKAHF2jlKOp5a4mp2byA400W7zlJPYz007MN03kjE"
@@ -33,10 +34,10 @@ const Payment = () => {
   }
 
   return (
-    <div>
+    <div className="font-montserrat">
       <div className="h-full">
-        <div className="h-full w-full grid place-content-center gap-4">
-          <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="h-full lg:mt-32 w-full flex justify-center items-center">
+          <div className="card w-96 lg:mr-20 bg-stone-100 shadow-xl">
             <figure className="px-10 pt-10">
               <img src={data.img} alt="Shoes" className="rounded-xl" />
             </figure>
@@ -49,13 +50,14 @@ const Payment = () => {
                 <p>Total Price:</p> <p>{data.totalPrice}</p>
               </div>
               <p>
-                Please Pay{" "}
+                Please Pay
                 <span className="text-teal-500">${data.totalPrice}</span> To
                 Confirm The Order
               </p>
             </div>
           </div>
-          <div className="card w-96 bg-base-100 shadow-xl">
+
+          <div className="card w-96 bg-amber-50 shadow-xl">
             <div className="card-body">
               <Elements stripe={stripePromise}>
                 <PaymentForm order={data} />

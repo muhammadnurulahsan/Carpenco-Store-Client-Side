@@ -32,7 +32,6 @@ const Purchase = () => {
       customerEmail: user?.email,
       address: data.address,
       phone: data.phone,
-      // status: "Unpaid",
       orderStatus: "Uncomplete",
       paymentStatus: "Unpaid",
     };
@@ -191,11 +190,11 @@ const Purchase = () => {
           <div className="flex flex-col md:flex-row -mx-4">
             <div className="md:flex-1 lg:w-[50%] px-4">
               <div className="h-64 md:h-80 rounded-lg bg-gray-100 mb-4">
-                <div className="h-64 md:h-80 rounded-lg bg-gray-100 mb-4 flex items-center justify-center">
-                  <img src={img} className="w-full h-full rounded-lg" alt="" />
-                </div>
+                <figure className="px-10 py-10 rounded-lg bg-gray-100 mb-4 flex items-center justify-center">
+                  <img className="rounded-xl" src={img} alt="Album" />
+                </figure>
               </div>
-              <div className="md:flex-1 px-4">
+              <div className="md:flex-1 mt-16 px-4">
                 <h2 className="mb-2 leading-tight tracking-tight font-bold text-gray-800 text-2xl md:text-3xl">
                   {productName}
                 </h2>
@@ -320,7 +319,6 @@ const Purchase = () => {
                             max={aviQuantity}
                             onChange={checkValue}
                             value={inputValue}
-                            // {...register("amount", { required: true })}
                           />
                           <button
                             type="button"

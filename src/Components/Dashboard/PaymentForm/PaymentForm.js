@@ -1,6 +1,6 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 const PaymentForm = ({ order }) => {
   const stripe = useStripe();
@@ -10,6 +10,7 @@ const PaymentForm = ({ order }) => {
   const [transactionId, setTransactionId] = useState("");
   const [clientSecret, setClientSecret] = useState("");
   const { totalPrice, customer, customerEmail, _id } = order;
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (totalPrice) {
@@ -89,7 +90,7 @@ const PaymentForm = ({ order }) => {
           console.log(data);
           if (data.acknowledged) {
             const status = {
-              orderStatus: "Complete",
+              orderStatus: "Completed",
               paymentStatus: "Paid",
             };
             fetch(`https://carpenco-store.herokuapp.com/status/${_id}`, {
@@ -104,9 +105,10 @@ const PaymentForm = ({ order }) => {
               .then((res) => res.json())
               .then((data) => {
                 if (data.acknowledged) {
-                  swal("Successfully! Order has been Shipped", {
+                  swal("Successfully! Order has been Completed", {
                     icon: "success",
                   });
+                  navigate("/dashboard/my-orders");
                 }
               });
           }
@@ -115,7 +117,7 @@ const PaymentForm = ({ order }) => {
   };
 
   return (
-    <div>
+    <div className="">
       <form onSubmit={handleSubmit}>
         <CardElement
           options={{
@@ -135,7 +137,7 @@ const PaymentForm = ({ order }) => {
         />
         <button
           type="submit"
-          className="btn bg-teal-500 text-white hover:bg-teal-600 btn-sm mt-6"
+          className="btn btn-outline btn-success btn-sm mt-6"
           disabled={!stripe || !clientSecret}
         >
           Pay
@@ -143,8 +145,8 @@ const PaymentForm = ({ order }) => {
       </form>
 
       <div className="w-full h-full grid place-content-center relative">
-        <div className="text-center">
-          {cardError && <p className="text-red-500">{cardError}</p>}
+        <div className="text-center pt-5">
+          {cardError && <p className="text-red-500 pt-5">{cardError}</p>}
           {paymentSuccess && (
             <div>
               <p className="mb-4 text-green-500">{paymentSuccess}</p>
@@ -155,14 +157,11 @@ const PaymentForm = ({ order }) => {
             </div>
           )}
           <div className="mt-6 flex space-x-4 justify-center items-center">
-            <Link
-              className="btn btn-sm bg-slate-800 hover:bg-slate-400 text-white"
-              to="/"
-            >
+            <Link className="btn btn-outline btn-sm" to="/">
               Go To Home
             </Link>
             <Link
-              className="btn btn-sm bg-indigo-500 hover:bg-indigo-600 text-white"
+              className="btn btn-sm btn-outline btn-primary"
               to="/dashboard/my-orders"
             >
               My Orders

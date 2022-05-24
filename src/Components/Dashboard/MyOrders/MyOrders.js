@@ -120,9 +120,9 @@ const MyOrder = () => {
                         </Link>
                       </>
                     )}
-                    {order?.orderStatus === "Complete" && (
+                    {order?.orderStatus === "Completed" && (
                       <button className="text-white btn-disabled btn btn-sm no-animation bg-rose-400">
-                        Payment Accept
+                        Payment Accepted
                       </button>
                     )}
 
