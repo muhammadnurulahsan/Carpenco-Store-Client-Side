@@ -3,11 +3,12 @@ import { useEffect, useState } from "react";
 const useToken = (user) => {
   const [token, setToken] = useState("");
 
-  useEffect(() => {
-    const email = user?.email;
-    const name = user?.displayName;
-    const currentUser = { name: name, email: email };
+  const email = user?.email;
+  const name = user?.displayName;
+  console.log(name);
 
+  useEffect(() => {
+    const currentUser = { name: name, email: email };
     if (email) {
       fetch(`https://carpenco-store.herokuapp.com/user/${email}`, {
         method: "PUT",
@@ -24,7 +25,7 @@ const useToken = (user) => {
           setToken(token);
         });
     }
-  }, [user]);
+  }, [email, name]);
 
   return [token];
 };

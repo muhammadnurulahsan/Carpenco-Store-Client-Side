@@ -2,11 +2,8 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import avatar from "../../../Assets/review-avatar.png";
-// import { useAuthState } from "react-firebase-hooks/auth";
-// import auth from "../../../firebase.init";
 
 const ReviewCard = ({ review }) => {
-  // const [user] = useAuthState(auth);
   const { img, name, email, rating, reviewText } = review;
   return (
     <div>

@@ -50,9 +50,9 @@ const Register = () => {
     handleSubmit,
   } = useForm();
 
-  if (createUser) {
-    console.log(createUser);
-  }
+  // if (createUser) {
+  //   console.log(createUser);
+  // }
 
   if (createUserLoading || updating) return <Loading></Loading>;
 

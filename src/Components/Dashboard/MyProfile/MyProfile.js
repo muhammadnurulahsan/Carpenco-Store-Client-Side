@@ -52,13 +52,17 @@ const MyProfile = (e) => {
         <div className="w-full mx-auto bg-white border border-gray-200 rounded-xl overflow-hidden text-gray-800">
           <div className="w-full h-36 md:h-48 bg-gray-100 bg-random"></div>
           <div className="rounded-full w-44 h-44 mx-auto md:mx-7 border-4 border-white bg-white -mt-28 md:-mt-32 z-10 relative overflow-hidden">
-            <img src={data.img || avatar} alt="" className="w-full h-full" />
+            <img
+              src={data.img || user?.photoURL || avatar}
+              alt=""
+              className="w-full h-full"
+            />
           </div>
           <div className="w-full px-8 pt-3 pb-8">
             <div className="-mx-3 md:flex">
               <div className="px-3 w-full md:w-2/3 text-center md:text-left mb-5">
                 <h1 className="font-semibold text-2xl">
-                  {data?.name || "Gest User"}
+                  {data?.name || user?.displayName || "Gest User"}
                 </h1>
                 <h3 className="text-xl">
                   {data?.education || "Full Stack Developer"}

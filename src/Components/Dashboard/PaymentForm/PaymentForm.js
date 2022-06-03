@@ -2,6 +2,11 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import swal from "sweetalert";
+
+
+
+
+
 const PaymentForm = ({ order }) => {
   const stripe = useStripe();
   const elements = useElements();
